@@ -1,0 +1,65 @@
+<% include header %>
+<div class="news">
+<h1>Technopolis</h1>
+    <img src="/img/technologo.png" class="logo">
+    
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Categorieën</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+            <% for (var i = 0; i < categorieen.length; i++)             { %><a href="/categorieen/<%- i %>"><%-          categorieen[i] %></a><% } %>
+          </li>
+      </ul>
+    
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- 
+
+<nav>
+                        <h4>Categorieën:</h4>
+                        <% for (var i = 0; i < categorieen.length; i++) { %>
+                            <a href="/categorieen/<%- i %>">
+                                <%- categorieen[i] %>
+                            </a>
+                            <% } %>
+                    </nav>
+ -->
+<div class="container">
+    <div class="row">
+    <div class="col-ls-12">
+  <% var teller = 1; %>
+  <% musea.forEach(function(item){ %>
+    <section>
+        <h2>
+          <a href=/items/<%- item.id %>><%- item.titel %></a>
+        </h2>
+        <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
+        <p><%- item.datum %></p>
+
+        <p>
+          <%- item.samenvatting %>
+        </p>
+    </section>
+    <% teller++;}); %>
+        </div>
+    </div>
+    </div>
+</div>
+
+<% include footer %>

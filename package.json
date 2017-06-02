@@ -1,0 +1,26 @@
+{
+  "name": "cmt4-oefweek6-museumapp",
+  "version": "1.0.0",
+  "description": "Mobile Technopolis",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "web",
+    "musea",
+    "technology",
+    "node",
+    "express"
+  ],
+  "author": "Thomas Borms",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  }
+}
